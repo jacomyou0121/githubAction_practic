@@ -31,5 +31,14 @@ jobs:
 
       - name: Gihub Action 자체이 저장되어 있는 변수 사용
         run: |
-          echo $GITHUB_SHA
+#          해당 커밋의 아이디 값
+          echo $GITHUB_SHA 
+#         깃헙의 레포지토리명
           echo $GITHUB_REPOSITORY
+
+      - name: 아무한테 노출이 되면 안되는 값
+        run: |
+          echo ${{ secrets.MY_HOBBY }}
+          echo ${{ secrets.MY_NAME }}
+          
+
